@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet</title>
+    <link rel="stylesheet" href="bmi.css">
+    <link rel="icon" href="img\favicon-32x32.png">
+    <script src="bmi.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      .white-text {
+        color: #7e57c2;
+        font-weight: bold;
+      }
+    </style>
+    
+</head>
+<body>
+    
+  <body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <!-- Replace "CodingLab" with an image logo and link it to the home page -->
+            <span class="logo navLogo"><a href="welcome.php">Docami</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <!-- You can keep this part as it is -->
+                    <span class="logo"><a href="">CodingLab</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <!-- The rest of your navigation menu code remains the same -->
+                <ul class="nav-links">
+                  <li><a href="welcome.php" style="color: white;"><span class="nav-link-hover"></span>Home</a></li>
+                  <li><a href="bmi.html"><span class="nav-link-hover"></span>BMI</a></li>
+                  <li><a href="diet.html"><span class="nav-link-hover"></span>DIET</a></li>
+                  <li><a href="bmr.html"><span class="nav-link-hover"></span>BMR</a></li>
+                  <li><a href="calorie.html"><span class="nav-link-hover"></span>CALORIES</a></li>
+                  <li><a href="about.html"><span class="nav-link-hover"></span>ABOUT</a></li>
+                  <li><a href="profile.html"><span class="nav-link-hover"></span>PROFILE</a></li>
+                  <li><a href="notification.html"><span class="nav-link-hover"></span>NOTIFY ME</a></li>
+                  <li><a href="index.php" class="#btn" style="color: white;">LOGOUT</a></li>
+              </ul>
+            </div>
+
+        
+  
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="whole-page">
+      <br><br> <div class="bmi">
+        <p style="color: rgb(251, 243, 243);">BMI CALCULATOR</p>
+
+      </div>
+      <div class="calc">
+        <form>
+          <span class="metric" style="color: white;">ENTER YOUR HEIGHT:</span>
+<input id="height" type="text" placeholder="Height in cm" required><br><br>
+<span class="metric" style="color: white;">ENTER YOUR WEIGHT:</span>
+<input id="weight" type="text" placeholder="Weight in kg" required><br><br>
+
+
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100px;">
+  <input id='btn' type="button" value="SUBMIT" style="color: white; width: 80px; height: 40px;">
+</div>
+
+        
+        </form>
+      </div>
+      <div class="answer">
+        <p id="result"></p>
+        <p id ="diet-plan"></p>
+      </div>
+    </div>
+
+<body>
+  <div id="result" class="red-text"></div>
+  <div id="diet-plan" class="red-text"></div>
+  
+  
+
+  <script>
+    window.onload = function () {
+      let btn = document.getElementById('btn');
+      btn.onclick = bmi;
+    };
+
+    function bmi() {
+      height = parseInt(document.getElementById('height').value);
+      weight = parseInt(document.getElementById('weight').value);
+      height = Math.pow(height / 100, 2);
+      result = Math.round((weight / height) * 100) / 100;
+      if (isNaN(result)) {
+        document.getElementById('result').innerHTML =
+          "<b class='white-text'>Please Fill the given fields.</b>";
+        alert('Fill it!');
+        document.getElementById('diet-plan').innerHTML =
+          "<b class='white-text'>Please Calculate Your BMI first!!!</b>";
+        alert('Find your BMI');
+      } else if (result < 18.5) {
+        document.getElementById('result').innerHTML =
+          "<b class='white-text'>Your Current BMI is " +
+          result +
+          " Kg/m2</b><br><br><b class='white-text'>&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;Underweight</b>";
+        document.getElementById('diet-plan').innerHTML =
+          "&emsp;&emsp;&emsp;&emsp;<marquee class='white-text'>As Your Weight is below ideal, You need to gain some weight, So you have to be in calorie surplus!&emsp;&emsp;&emsp;&emsp;For that, I will be providing you some dietary foods and plans that can make you gain some weight.</marquee>";
+      } else if (result >= 18.5 && result <= 24.9) {
+        document.getElementById('result').innerHTML =
+          "<b class='white-text'>Your Current BMI is " +
+          result +
+          " Kg/m2</b><br><br><b class='white-text'>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Normal</b>";
+        document.getElementById('diet-plan').innerHTML =
+          "&emsp;&emsp;&emsp;&emsp;<marquee class='white-text'>As Your weight level is ideal, You can Choose Whatever, Either You can do weight loss to look more shredded or You can do Weight Gain to look More Muscular!!!</marquee>";
+      } else if (result >= 25.0 && result < 29.9) {
+        document.getElementById('result').innerHTML =
+          "<b class='white-text'>Your Current BMI is " +
+          result +
+          " Kg/m2</b><br><br><b class='white-text'>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Overweight</b>";
+        document.getElementById('diet-plan').innerHTML =
+          "&emsp;&emsp;&emsp;&emsp;<marquee class='white-text'>As Your Weight level is a bit more than the ideal weight, You have to lose some weight, For that, you have to be in calorie deficit!&emsp;&emsp;&emsp;&emsp;I will be providing you some dietary foods and plans that can make you lose some weight.</marquee>";
+      } else if (result >= 30.0) {
+        document.getElementById('result').innerHTML =
+          "<b class='white-text'>Your Current BMI is " +
+          result +
+          " Kg/m2</b><br><br><b class='white-text'>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Obese</b>";
+        document.getElementById('diet-plan').innerHTML =
+          "&emsp;&emsp;&emsp;&emsp;<marquee class='white-text'>As Your Weight level is far from ideal, You need to lose weight, So you have to be in calorie deficit!&emsp;&emsp;&emsp;&emsp;For that, I will be providing you some dietary foods and plans that can make you lose weight.</marquee>";
+      }
+    }
+  </script>
+
+
+</body>
+</html>

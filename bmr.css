@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+
+* {
+  font-family: "Jost", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('bmr.jpeg'); /* Add the path to your image file */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-attachment: fixed; /* Fix the image position */
+  font-family: 'Work Sans', sans-serif;
+}
+
+body {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #222;
+}
+
+.container {
+  width: 90%;
+  max-width: 480px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.container h1 {
+  line-height: 1;
+  text-align: center;
+}
+
+form#calculator {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+}
+
+form#calculator label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+form#calculator input,
+form#calculator select {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  outline-color: slateblue;
+}
+
+form#calculator button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #fff;
+  transition: filter 0.3s;
+}
+
+form#calculator button[type="reset"] {
+  background: #333;
+}
+
+form#calculator button[type="submit"] {
+  background: slateblue;
+}
+
+form#calculator button:hover {
+  filter: brightness(1.25);
+}
+
+div#result {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.76, 0, 0.24, 1),
+    opacity 0.3s ease-in-out 0.3s;
+}
+
+div#result.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.bmr {
+  margin-top: 20px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.bmr span {
+  background: rgba(105, 90, 205, 0.15);
+  color: slateblue;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.bmr h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+  color: slateblue;
+}
+
+.bmr p {
+  color: slategray;
+  font-weight: 500;
+}
+
+.daily-calories {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.daily-calories h3 {
+  padding: 5px 10px;
+  text-align: center;
+  color: slateblue;
+}
+
+.activity-levels {
+  list-style-type: none;
+  border-top: 1px solid #ddd;
+}
+
+.activity-levels li {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-levels li:nth-child(even) {
+  background: rgba(105, 90, 205, 0.05);
+}
+
+.activity-levels p {
+  line-height: 1.15;
+}
+
+.activity-levels .name {
+  display: block;
+  font-weight: 500;
+  color: #333;
+}
+
+.activity-levels .desc {
+  color: slategray;
+}
+
+.activity-levels .value {
+  font-weight: 500;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMR Calculator</title>
+  <link rel="stylesheet" href="bmr.css">
+  <script src="bmr.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen' ></i>
+        <!-- Replace "CodingLab" with an image logo and link it to the home page -->
+        <span class="logo navLogo"><a href="welcome.php">Docami</a></span>
+
+        <div class="menu">
+            <div class="logo-toggle">
+                <!-- You can keep this part as it is -->
+               
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+
+            <!-- The rest of your navigation menu code remains the same -->
+            <ul class="nav-links">
+<li><a href="welcome.php" style="color: white;"><span class="nav-link-hover"></span>Home</a></li>
+<li><a href="bmi.html"><span class="nav-link-hover"></span>BMI</a></li>
+<li><a href="diet.html"><span class="nav-link-hover"></span>DIET</a></li>
+<li><a href="bmr.html"><span class="nav-link-hover"></span>BMR</a></li>
+<li><a href="calorie.html"><span class="nav-link-hover"></span>CALORIES</a></li>
+<li><a href="about.html"><span class="nav-link-hover"></span>ABOUT</a></li>
+<li><a href="profile.html"><span class="nav-link-hover"></span>PROFILE</a></li>
+<li><a href="notification.html"><span class="nav-link-hover"></span>NOTIFY ME</a></li>
+<li><a href="index.php" class="#btn" style="color: white;">LOGOUT</a></li>
+</ul>
+
+        </div>
+
+    
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+  <div class="container">
+    <h1>BMR Calculator</h1>
+
+    <form id="calculator">
+      <div>
+        <label for="weight">Weight (kg)</label>
+        <input type="number" id="weight" placeholder="Weight in kg" min="0" value="0" step="0.01">
+      </div>
+      <div>
+        <label for="height">Height (cm)</label>
+        <input type="number" id="height" placeholder="Height in cm" min="0" value="0" step="0.01">
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Age" min="0" value="0">
+      </div>
+      <div>
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="result">
+
+      <div class="bmr">
+        <span>BMR</span>
+        <h2 id="bmr">0</h2>
+        <p>kcal/day</p>
+      </div>
+
+
+      <div class="daily-calories">
+        <h3>Daily Calorie Needs</h3>
+
+        <ul class="activity-levels">
+          <li>
+            <p>
+              <strong class="name">Sedentary</strong>
+              <small class="desc">Little to no exercise</small>
+            </p>
+            <span class="value" id="sedentary">0</span>
+          </li>
+          <li>
+            <p>
+              <strong class="name">Lightly Active</strong>
+              <small class="desc">Light exercise or sports (1-3 days/week)</small>
+            </p>
+            <span class="value" id="light">0</span>
+          </li>
+          <li>
+            <p>
+              <strong class="name">Moderately Active</strong>
+              <small class="desc">Moderate exercise or sports (4-5 days/week)</small>
+            </p>
+            <span class="value" id="moderate">0</span>
+          </li>
+          <li>
+            <p>
+              <strong class="name">Very Active</strong>
+              <small class="desc">Hard exercise or sports (6-7 days/week)</small>
+            </p>
+            <span class="value" id="very-active">0</span>
+          </li>
+          <li>
+            <p>
+              <strong class="name">Super Active</strong>
+              <small class="desc">Very hard exercise, physical job, or training twice a day</small>
+            </p>
+            <span class="value" id="super-active">0</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

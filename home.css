@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+div img {
+    width: 60%;
+}
+
+div img:nth-child(1) {
+    border-radius: 15px;
+}
+
+.container>.row {
+    margin-top: 1em;
+}
+
+
+
+
+@media (max-width: 991px) {
+    div {
+        margin: 0.5em 0;
+    }
+
+    #tlo>div {
+        margin: 0 0;
+    }
+
+    .row:nth-child(2n) {
+        flex-direction: column-reverse;
+    }
+
+}

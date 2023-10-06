@@ -1,0 +1,275 @@
++
+<!--Website: wwww.codingdung.com-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="profile.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script src="user.js"></script>
+<script src="server.js"></script>
+
+
+<style>
+    body {
+        background-image: url('profile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <!-- Replace "CodingLab" with an image logo and link it to the home page -->
+            <span class="logo navLogo"><a href="welcome.php">Docami</a></span>
+  
+            <div class="menu">
+                <div class="logo-toggle">
+                    <!-- You can keep this part as it is -->
+                    <span class="logo"><a href="">CodingLab</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+  
+                <!-- The rest of your navigation menu code remains the same -->
+                <ul class="nav-links">
+                  <li><a href="welcome.php" style="color: white;"><span class="nav-link-hover"></span>Home</a></li>
+                  <li><a href="bmi.html"><span class="nav-link-hover"></span>BMI</a></li>
+                  <li><a href="diet.html"><span class="nav-link-hover"></span>DIET</a></li>
+                  <li><a href="bmr.html"><span class="nav-link-hover"></span>BMR</a></li>
+                  <li><a href="calorie.html"><span class="nav-link-hover"></span>CALORIES</a></li>
+                  <li><a href="about.html"><span class="nav-link-hover"></span>ABOUT</a></li>
+                  <li><a href="profile.html"><span class="nav-link-hover"></span>PROFILE</a></li>
+                  <li><a href="notification.html"><span class="nav-link-hover"></span>NOTIFY ME</a></li>
+                  <li><a href="index.php" class="#btn" style="color: white;">LOGOUT</a></li>
+              </ul>
+            </div>
+  
+        
+  
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    
+
+
+    <br> <br> <br>
+    <div class="container light-style flex-grow-1 container-p-y">
+        <h4 class="font-weight-bold py-3 mb-4 text-center">
+            Account settings
+        </h4>
+        
+        <div class="card overflow-hidden">
+            <div class="row no-gutters row-bordered row-border-light">
+                <div class="col-md-3 pt-0">
+                    <div class="list-group list-group-flush account-settings-links">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                            href="#account-general">General</a>
+
+
+
+
+
+
+
+
+                        <!-- <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-change-password">Change password</a> -->
+                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-info">Target Goal</a>
+
+
+
+
+
+
+
+
+
+                            <!-- <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-notifications">To do list</a> -->
+                            
+                         <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-social-links">To do list</a> 
+
+
+
+
+
+
+
+                        <!-- <a class="list-group-item list-group-item-action" data-toggle="list"
+                            href="#account-connections">Connections</a> -->
+
+
+
+                            
+                     
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="account-general">
+                          
+
+
+
+
+
+                            
+                            <div class="form-group">
+
+                                <br> 
+
+                                <label for="photo">  Profile pic:</label>
+
+                                <input type="file" id="photo" name="photo">
+
+                                <img src="" id="preview-image" alt="Preview" style="max-width: 200px; display: none;">
+                            </div>
+
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control mb-1" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Age</label>
+                                    <input type="number" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Height</label>
+                                    <input type="number" class="form-control mb-1" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Weight</label>
+                                    <input type="number" class="form-control" value="">
+                                
+                            </div>
+                        </div>
+                    
+       <!-- <div class="tab-pane fade" id="account-change-password">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <label class="form-label">Current password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">New password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Repeat new password</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="tab-pane fade" id="account-info">
+                            <div class="card-body pb-2">
+                                <div class="form-group">
+                                    <!-- <label class="form-label">Target </label> -->
+                                    <textarea class="form-control"
+                                        rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus.</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="account-social-links">
+                            <div class="card-body pb-2">
+                                
+                                <div class="form-group">
+                                    <label class="form-label"></label>
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="">
+                                </div>
+                            </div> 
+                            </div>
+                            <!-- <hr class="border-light m-0">
+                            <div class="card-body pb-2">
+                                <!-<h6 class="mb-4">Contacts</h6> -->
+                                <!-- <div class="form-group">
+                                    <input type="text" class="form-control" value="+0 (123) 456 7891">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Website</label>
+                                    <input type="text" class="form-control" value>
+                                </div>  --> 
+                           
+                        <!-- <div class="tab-pane fade" id="account-connections">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-twitter">Connect to
+                                    <strong>Twitter</strong></button>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <h5 class="mb-2">
+                                    <a href="javascript:void(0)" class="float-right text-muted text-tiny"><i
+                                            class="ion ion-md-close"></i> Remove</a>
+                                    <i class="ion ion-logo-google text-google"></i>
+                                    You are connected to Google:
+                                </h5>
+                                <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="f9979498818e9c9595b994989095d79a9694">[email&#160;protected]</a>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-facebook">Connect to
+                                    <strong>Facebook</strong></button>
+                            </div>
+                            <hr class="border-light m-0">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-instagram">Connect to
+                                    <strong>Instagram</strong></button>
+                            </div>
+                        </div> -->
+                        
+        <div class="text-right mt-3">
+            <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+            <button type="button" class="btn btn-default">Cancel</button>
+        </div>
+    </div>
+    </div>
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html>

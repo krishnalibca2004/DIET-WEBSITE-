@@ -1,0 +1,152 @@
+
+/* Reset some default styles and set a background color */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('bmi.jpg'); /* Add the path to your image file */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Fix the image position */
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Rest of your CSS styles */
+/* ... (your existing styles) ... */
+
+
+/* Reset some default styles and set a background color */
+body {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Style the header section */
+.name {
+    display: flex;
+    color: black;
+    font-family: 'Moon Dance', cursive;
+    font-weight: 1000;
+    font-size: 40px;
+    padding-left: 70px;
+    padding-top: 20px;
+    align-items: center;
+    box-shadow: 0px 7px 5px 0px rgba(255, 255, 255, 1);
+}
+
+/* Style the navigation menu */
+.nav1 {
+    display: flex;
+    list-style: none;
+    margin-left: 30%;
+    align-items: center;
+}
+
+.list a {
+    display: flex;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 30px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.list a:hover {
+    color: grey;
+}
+
+/* Style the BMI calculator section */
+.whole-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.bmi {
+    color: black;
+    font-weight: 1000;
+    font-size: 40px;
+    margin-top: 5px;
+    padding: 20px;
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content both horizontally and vertically */
+    margin-top: 20px;
+    background-color: #7e57c2; /* Add your desired attractive color here */
+    padding: 20px;
+    border-radius: 10px; /* Add rounded corners for a nice look */
+}
+
+.metric {
+    color: black;
+    font-weight: 100;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* Style the input elements and submit button */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    transition: opacity 0.5s;
+    box-shadow: 0px 1px 11px 4px rgba(153, 153, 153, 1);
+}
+
+input[type="text"]:hover {
+    opacity: 0.8;
+}
+
+#btn {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100px; /* Reduce the width to make the button smaller */
+    border-radius: 50px;
+    border: none;
+    background-color: transparent;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    transition: opacity 0.5s;
+    box-shadow: 0px 1px 19px 5px rgba(0, 0, 0, 0.75);
+    align-self: center; /* Center the button horizontally within the box */
+    align-items: center; /* Center the button vertically within the box */
+    display: flex; /* Ensure the button content is centered */
+}
+
+#btn:hover {
+    opacity: 0.8;
+}
+
+/* Style the result and diet plan sections */
+.answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#result, #diet-plan {
+    margin: 10px;
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    text-align: center;
+}

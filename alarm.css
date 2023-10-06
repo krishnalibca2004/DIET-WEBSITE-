@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('notify.jpg'); /* Add the path to your image file */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-attachment: fixed; /* Fix the image position */
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 440px;
+  padding: 40px 50px;
+  background: url('notify.jpg') center/cover no-repeat; /* Add background image */
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+}
+
+/* ... (your existing CSS rules) ... */
+
+.wrapper img {
+  max-width: 103px;
+}
+
+.wrapper h1 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.wrapper .content {
+  width: 100%;
+  justify-content: center;
+}
+
+h1 {
+  color: #333;
+}
+
+div {
+  margin-bottom: 1px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.wrapper button {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 17px 0;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #4A98F7;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

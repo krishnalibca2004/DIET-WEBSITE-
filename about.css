@@ -1,0 +1,24 @@
+#tlo {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+
+    z-index: -1;
+}
+
+#tlo h1 {
+    font-size: 8vw;
+    position: absolute;
+    z-index: 1;
+}
+
+#tlo img {
+    border-radius: 0;
+    width: 100%;
+    opacity: 0.4;
+}
